@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "production-start": "pm2 start npm --name \"next\" -- start"
+  },
+  "dependencies": {
+    "next": "7.0.2",
+    "react": "16.7.0",
+    "react-dom": "16.7.0"
+  }
+}

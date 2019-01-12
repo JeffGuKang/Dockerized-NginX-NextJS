@@ -1,0 +1,1 @@
+export default () => <div>Test next.js!</div>

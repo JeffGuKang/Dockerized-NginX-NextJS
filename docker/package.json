@@ -1,0 +1,6 @@
+{
+	"scripts": {
+		"letsencrypt": "chmod +x init-letsencrypt.sh && sudo ./init-letsencrypt.sh",
+		"docker:up": "docker-compose up -d && docker-compose logs -f"
+	}
+}
