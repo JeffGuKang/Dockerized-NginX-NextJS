@@ -26,7 +26,7 @@ services:
     # container_name: nextjs
     image: node:8.15.0
     ports:
-      - "3000:3000"
+      - "3000"
     volumes:
       - ../nextjs:/app/nextjs
       - ./logs/nextjs/npm:/root/.npm/_logs
