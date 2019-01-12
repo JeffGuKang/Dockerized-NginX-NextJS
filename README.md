@@ -25,7 +25,6 @@ services:
   nextjs:
     # container_name: nextjs
     image: node:8.15.0
-    build: ../nextjs
     ports:
       - "3000:3000"
     volumes:
@@ -49,5 +48,5 @@ services:
       - ./data/certbot/www:/var/www/certbot
     links:
       - nextjs
-restart: always
+    restart: always
 ```
