@@ -2,9 +2,9 @@ version: '3.7'
 services:
   nextjs:
     # container_name: nextjs
-    image: node:8.15.0
+    image: node:8.15.0-alpine
     ports:
-      - "3000:3000"
+      - "3000"
     volumes:
       - ../nextjs:/app/nextjs
       - ./logs/nextjs/npm:/root/.npm/_logs
@@ -15,7 +15,7 @@ services:
         npm run start"
   nginx:
     # container_name: nginx
-    image: nginx:latest
+    image: nginx:1.15.8-alpine
     ports:
       - '80:80'
       - '443:443'
