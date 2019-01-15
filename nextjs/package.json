@@ -3,7 +3,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "production-start": "pm2 start npm --name \"next\" -- start"
+    "production-start": "npm install -f && npm run build && npm run start"
   },
   "dependencies": {
     "next": "7.0.2",
