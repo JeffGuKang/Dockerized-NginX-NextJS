@@ -7,14 +7,17 @@ Make your NextJS app in /nextjs and run in real server or aws with nginx without
 Start
 
 ```sh
-cd docker
-docker-compose up -d # d for detached
+docker-compose up -d && docker-compose logs -f
+or
+npm run docker:up
 ```
 
 Stop
 
 ```sh
 docker-compose stop
+or
+npm run docker:stop
 ```
 
 ## AWS Beanstalk with Multiple Docker Configuration.

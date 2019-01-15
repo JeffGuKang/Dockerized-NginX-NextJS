@@ -1,5 +1,6 @@
 {
 	"scripts": {
-		"docker:up": "docker-compose up -d && docker-compose logs -f"
+		"docker:up": "docker-compose up -d && docker-compose logs -f",
+		"docker:down": "docker-compose stop"
 	}
 }
