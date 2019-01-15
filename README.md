@@ -43,25 +43,25 @@ Do not forget set enough memory for `NextJS`. (256 minimum)
     }
   ],
   "containerDefinitions": [
-		{
+    {
       "name": "nextjs",
       "image": "node:8.15.0-alpine",
       "essential": true,
-			"memory": 512,
-			"portMappings": [
+      "memory": 512,
+      "portMappings": [
         {
-					"hostPort": 3000,
+          "hostPort": 3000,
           "containerPort": 3000
         }
-			],
-			"workingDirectory": "/app",
-			"command": ["npm", "run", "production-start"],
-			"mountPoints": [
+      ],
+      "workingDirectory": "/app",
+      "command": ["npm", "run", "production-start"],
+      "mountPoints": [
         {
           "sourceVolume": "nextjs-volume",
           "containerPath": "/app"
-				}
-			]
+        }
+      ]
     },
     {
       "name": "nginx-proxy",
@@ -73,10 +73,10 @@ Do not forget set enough memory for `NextJS`. (256 minimum)
           "hostPort": 80,
           "containerPort": 80
         }
-			],
-			"links": [
-				"nextjs"
-			],
+      ],
+      "links": [
+        "nextjs"
+      ],
       "mountPoints": [
         {
           "sourceVolume": "nginx-proxy-conf",
