@@ -6,8 +6,8 @@ services:
     ports:
       - "3000"
     volumes:
-      - ../nextjs:/app/nextjs
-      - ./logs/nextjs/npm:/root/.npm/_logs
+      - ./nextjs:/app/nextjs
+      - ./nginx/logs/nextjs/npm:/root/.npm/_logs
     working_dir: /app/nextjs
     command: >
       /bin/sh -c "npm install -f&&
@@ -20,8 +20,8 @@ services:
       - '80:80'
       - '443:443'
     volumes:
-      - ./nginx:/etc/nginx/conf.d
-      - ./logs/nginx:/var/log/nginx
+      - ./nginx/conf:/etc/nginx/conf.d
+      - ./nginx/logs/nginx:/var/log/nginx
     links:
       - nextjs
     restart: always
